@@ -19,6 +19,57 @@
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
+
+    <script>
+      window.onload = function() {
+
+        var dataPoints = [];
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+        	theme: "light2",
+        	title: {
+        		text: "Ocupação do Restaurante"
+        	},
+        	data: [{
+        		type: "area",
+            fillOpacity: .3,
+            lineThickness: 5,
+        		dataPoints: dataPoints
+        	}]
+        });
+        updateData();
+
+        // Initial Values
+        var xValue = 0;
+        var yValue = 10;
+        var newDataCount = 6;
+
+        function addData(data) {
+        	if(newDataCount != 1) {
+        		$.each(data, function(key, value) {
+        			dataPoints.push({x: value[0], y: parseInt(value[1])});
+        			xValue++;
+        			yValue = parseInt(value[1]);
+        		});
+        	} else {
+        		//dataPoints.shift();
+        		dataPoints.push({x: data[0][0], y: parseInt(data[0][1])});
+        		xValue++;
+        		yValue = parseInt(data[0][1]);
+        	}
+
+        	newDataCount = 1;
+        	chart.render();
+        	setTimeout(updateData, 1500);
+        }
+
+        function updateData() {
+        	$.getJSON("https://canvasjs.com/services/data/datapoints.php?xstart="+xValue+"&ystart="+yValue+"&length="+newDataCount+"type=json"+"&callback=?", addData);
+        }
+
+      }
+</script>
+
 </head>
 
 <body>
@@ -79,6 +130,18 @@
                 <div class="tab-pane fade show active" id="nav-seg" role="tabpanel" aria-labelledby="nav-seg-tab">
                   <br/>
                   <p style="text-align: center;">Segunda-feira, 4 de Junho de 2018</p>
+                  <div>
+                    <p><strong>Gráfico dinâmico</strong></p>
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    <p></p>
+                  </div>
+
+                  <div>
+                    <p><strong>Gráfico estático</strong></p>
+
+                    <p></p>
+                  </div>
+
                   <table class="table table-borderless">
                     <!-- On rows -->
                     <tr class="table-active">
@@ -271,7 +334,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
     <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
