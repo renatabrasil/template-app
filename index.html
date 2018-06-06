@@ -11,7 +11,10 @@
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -21,15 +24,18 @@
 <body>
 
     <div id="wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <button class="navbar-toggler" type="button" data-target="#menu-toggle" id="menu-toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </a>
-      $ i
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <button class="navbar-toggler" type="button" data-target="#menu-toggle" id="menu-toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </a>
+        <span class="oi oi-info"></span>
+        <span class="oi oi-dollar"></span>
+      </div>
 
-    </div>
+
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -51,15 +57,6 @@
                 <li>
                     <a href="#">Químicas</a>
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -67,10 +64,114 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <h1>Simple Sidebar</h1>
-                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <a href="#menu-toggle2" class="btn btn-secondary" id="menu-toggle2">Toggle Menu</a>
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">SEG</a>
+                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">TER</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">QUA</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">QUI</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">SEX</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">SAB</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">DOM</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <br/>
+                  <p style="text-align: center;">Segunda-feira, 4 de Junho de 2018</p>
+                  <table class="table table-borderless">
+                    <!-- On rows -->
+                    <tr class="table-active">
+                      <th>ALMOÇO</th>
+                    </tr>
+
+
+                    <!-- On cells (`td` or `th`) -->
+                    <tr class="table-sm">
+                      <td>Arroz/feijão/arroz integral</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Hamburguer com molho americano</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Opção: PVT com milho</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Cenoura com salsa</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Salada de escarola</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Goiaba</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Minipão/refresco</td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td>Valor calórico para uma refeição: 900 Kcal</td>
+                    </tr>
+                  </table>
+
+                  <br/>
+
+                  <table class="table table-borderless">
+                    <!-- On rows -->
+                    <tr class="table-active">
+                      <th>JANTAR</th>
+                    </tr>
+
+
+                    <!-- On cells (`td` or `th`) -->
+                    <tr class="table-sm">
+                      <td>Arroz/feijão/arroz integral</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Carne assada com molho roti</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Opção: PVT com espinafre</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Virado de cebola</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Salada de acelga</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Laranja</td>
+                    </tr>
+                    <tr class="table-sm">
+                      <td>Minipão/refresco</td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td>Valor calórico para uma refeição: 1010 Kcal</td>
+                    </tr>
+                  </table>
+
+                  <br/>
+
+                  <table class="table table-borderless">
+                    <!-- On rows -->
+                    <tr class="table-active">
+                      <th>Observação</th>
+                    </tr>
+
+                    <tr class="table-secondary table-sm">
+                      <td>Cardápio sujeito a modificação</td>
+                    </tr>
+                  </table>
+
+                </div>
+
+
+
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+              </div>
+
+
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -79,8 +180,12 @@
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- Menu Toggle Script -->
     <script>
